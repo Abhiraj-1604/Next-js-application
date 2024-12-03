@@ -9,6 +9,7 @@ import {
   SiGithub,
   SiGooglecloud,
 } from "react-icons/si";
+import Image from "next/image";
 
 const about = {
   title: "About me",
@@ -82,12 +83,16 @@ const skills = {
   description: "",
   skillList: [
     {
-      icon: <FaPython />,
-      name: "Python",
+      icon: <SiKubernetes />,
+      name: "Kubernetes",
     },
     {
-      icon: <FaFlask />,
-      name: "Flask",
+      icon: <FaDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <SiTerraform />,
+      name: "Terraform",
     },
     {
       icon: <FaAws />,
@@ -98,20 +103,12 @@ const skills = {
       name: "Google Cloud",
     },
     {
-      icon: <FaDocker />,
-      name: "Docker",
-    },
-    {
-      icon: <SiKubernetes />,
-      name: "Kubernetes",
-    },
-    {
-      icon: <SiTerraform />,
-      name: "Terraform",
-    },
-    {
       icon: <FaJenkins />,
       name: "Jenkins",
+    },
+    {
+      icon: <Image src="/assets/assets/skills/argocd-original-wordmark.svg" alt="Argo CD" width={65} height={65} />,
+      name: "Argo CD",
     },
     {
       icon: <SiAnsible />,
@@ -119,7 +116,15 @@ const skills = {
     },
     {
       icon: <SiGithub />,
-      name: "Github",
+      name: "Github Actions",
+    },
+    {
+      icon: <FaPython />,
+      name: "Python",
+    },
+    {
+      icon: <FaFlask />,
+      name: "Flask",
     },
     {
       icon: <SiLinux />,
@@ -264,7 +269,10 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[1000px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="">{item.fieldValue}</span>
                       </li>
