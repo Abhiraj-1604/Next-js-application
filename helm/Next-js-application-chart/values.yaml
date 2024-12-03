@@ -8,7 +8,7 @@ image:
   repository: iamabhiraj/next-js-application
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "12143827872"
+  tag: "12145066041"
 
 ingress:
   enabled: false
